@@ -1,0 +1,1 @@
+web: gunicorn Linker.wsgi --log-file -
