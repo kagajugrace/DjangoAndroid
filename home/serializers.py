@@ -25,3 +25,8 @@ class KipharmaSerializer(serializers.ModelSerializer):
         model= Kipharma
         depth=1
         fields=('__all__')
+
+class PostSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=Postnews
+        fields =('_all_')

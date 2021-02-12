@@ -5,6 +5,7 @@ from .models import *
 admin.site.register(Pharmacy),
 admin.site.register(Medicine),
 admin.site.register (Kipharma),
+admin.site.register (Postnews),
 
 
 

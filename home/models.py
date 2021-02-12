@@ -25,4 +25,14 @@ class Kipharma(models.Model):
     def __str__(self):
         return self.location
 
+class Postnews(models.Model):
+    title = models.CharField(max_length=255)
+    owner = models.CharField(max_length=255)
+    # location =models.CharField(max_length=255)
+    image = models.ImageField()
+    price =models.CharField(max_length=255)
+    description = models.TextField()
+    def _str_(self):
+        return self.title
+
 # Create your models here.

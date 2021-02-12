@@ -9,5 +9,6 @@ urlpatterns=[
     path('pharmacy/',views.pharmacy,name='pharmacy'),
     path('medicine/',views.medicine,name='medicine'),
     path('kipharma/',views.kipharma,name='kipharma'),
+    path('post-data/', views.posts,name='post'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

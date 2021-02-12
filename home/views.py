@@ -68,3 +68,15 @@ def kipharma (request):
             serializer.save()
             return JsonResponse({'message':'data submited successful'},status=201)
         return JsonResponse(serializer.errors,status=400)
+
+def posts(request):
+    if request.method =='GET':
+        getdata = Postnews.objects.all().order_by('-id')[:40]
+        serializer =PostSerializers(getdata, many=True)
+        return JsonResponse({'message': 'success', 'data':serializer.data}, safe=False)
+    elif request.method=='POST':
+        data =JSONParser().parser(request)
+        serializer=PostSerializers(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({'message': 'success', 'data':serializer.da})
